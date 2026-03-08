@@ -62,7 +62,7 @@ sudo apt install -y unzip
 unzip sonar-scanner-cli-5.0.1.3006-linux.zip
 sudo mv sonar-scanner-5.0.1.3006-linux /opt/sonar-scanner
 
-export PATH=$PATH:/opt/sonar-scanner/bin'
+export PATH=$PATH:/opt/sonar-scanner/bin
 ```
 
 ---
