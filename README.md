@@ -490,8 +490,8 @@ pipeline {
         SONARQUBE_SERVER = 'SonarQubeServer'
         PATH = "/opt/sonar-scanner/bin:${PATH}"
         ECR_REPO = '128913199644.dkr.ecr.us-east-1.amazonaws.com/myecrrepo'
-        AWS_REGION = 'us-east-1'
-        DEPLOYMENT_REPO = 'https://github.com/Reshufowzi/deployment-repo.git'
+        AWS_REGION = 'ap-south-1'
+        DEPLOYMENT_REPO = 'https://github.com/Hari-haran1788/deployment-repo.git'
     }
 
     stages {
@@ -500,7 +500,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'git-cred',
-                    url: 'https://github.com/Reshufowzi/application-code.git'
+                    url: 'https://github.com/Hari-haran1788/application-code.git'
             }
         }
 
@@ -565,7 +565,7 @@ pipeline {
                 )]) {
                     sh '''
                         rm -rf gitops-repo
-                        git clone https://$GIT_USERNAME:$GIT_PASSWORD@github.com/Reshufowzi/deployment-repo.git gitops-repo
+                        git clone https://$GIT_USERNAME:$GIT_PASSWORD@github.com/Hari-haran1788/deployment-repo.git gitops-repo
 
                         cd gitops-repo/k8s || exit 1
 
